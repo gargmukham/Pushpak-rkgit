@@ -1,0 +1,971 @@
+/* 
+  ============================================
+  PUSHPAK SOCIETY WEBSITE - CSS STYLESHEET
+  ============================================
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* 
+  ===== CONTAINER CLASS =====
+  The container class is used to center content and control maximum width
+  This helps create a professional, centered layout
+*/
+.container {
+  max-width: 1200px;
+  /* Maximum width the container can be */
+  
+  margin: 0 auto;
+  /* Centers the container horizontally */
+  
+  padding: 0 20px;
+  /* Adds space inside the container from the edges */
+}
+
+/* 
+  ===== HEADER & NAVIGATION STYLES =====
+  Styles for the navigation bar at the top of the page
+*/
+
+.header {
+  background-color: #061E29;
+  /* Dark navy background color */
+  
+  color: white;
+  /* White text color */
+  
+  padding: 15px 0;
+  /* Space inside the header */
+  
+  position: fixed;
+  /* Stays in place when scrolling */
+  
+  width: 100%;
+  /* Takes up full width */
+  
+  top: 0;
+  /* Positions at the top */
+  
+  z-index: 1000;
+  /* Ensures header stays above other content */
+  
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for depth */
+}
+
+/* 
+  Inside the header container - arranges logo and nav side by side
+*/
+.header .container {
+  display: flex;
+  /* Makes items line up horizontally */
+  
+  justify-content: space-between;
+  /* Spreads items apart (logo on left, nav on right) */
+  
+  align-items: center;
+  /* Vertically centers items */
+}
+
+/* 
+  Logo section styling
+*/
+.logo {
+  flex: 1;
+  /* Takes available space */
+}
+
+.logo h1 {
+  font-size: 28px;
+  /* Size of the logo text */
+  
+  margin: 0;
+  /* Removes default margin */
+  
+  font-weight: bold;
+  /* Makes text bold */
+}
+
+.logo .tagline {
+  font-size: 12px;
+  /* Small text size */
+  
+  color: #a0a0a0;
+  /* Light gray color */
+  
+  margin: 3px 0 0 0;
+  /* Small top margin */
+}
+
+/* 
+  Navigation menu styling
+*/
+.navbar {
+  flex: 1;
+  /* Takes remaining space */
+  
+  text-align: right;
+  /* Aligns content to the right */
+}
+
+.nav-menu {
+  list-style: none;
+  /* Removes bullet points from list */
+  
+  display: flex;
+  /* Arranges items horizontally */
+  
+  gap: 30px;
+  /* Space between menu items */
+}
+
+.nav-link {
+  color: white;
+  /* White text */
+  
+  text-decoration: none;
+  /* Removes underline from links */
+  
+  font-size: 16px;
+  /* Font size for menu items */
+  
+  transition: color 0.3s ease;
+  /* Smooth color change animation */
+}
+
+.nav-link:hover {
+  color: #4db8ff;
+  /* Light blue color on hover */
+}
+
+/* 
+  ===== HERO SECTION STYLES =====
+  The large banner section at the top of the page
+*/
+
+.hero {
+  background: linear-gradient(135deg, #1D546D 0%, #061E29 100%);
+  /* Gradient background (slate blue to dark navy) */
+  
+  color: white;
+  /* White text */
+  
+  padding: 200px 20px;
+  /* Large padding for height */
+  
+  text-align: center;
+  /* Centers all content */
+  
+  margin-top: 60px;
+  /* Space for fixed header */
+}
+
+.hero-content {
+  max-width: 600px;
+  /* Maximum width for centered content */
+  
+  margin: 0 auto;
+  /* Centers the content */
+}
+
+.hero-title {
+  font-size: 48px;
+  /* Large headline font */
+  
+  margin-bottom: 20px;
+  /* Space below title */
+  
+  font-weight: bold;
+  /* Bold text */
+}
+
+.hero-subtitle {
+  font-size: 24px;
+  /* Medium font size */
+  
+  margin-bottom: 30px;
+  /* Space below subtitle */
+  
+  opacity: 0.9;
+  /* Slightly transparent */
+}
+
+/* 
+  Call-to-action button in hero section
+*/
+.cta-button {
+  background-color: #ff6b6b;
+  /* Red/coral color */
+  
+  color: white;
+  /* White text */
+  
+  padding: 15px 40px;
+  /* Internal spacing */
+  
+  border: none;
+  /* Removes border */
+  
+  border-radius: 5px;
+  /* Rounded corners */
+  
+  font-size: 16px;
+  /* Font size */
+  
+  cursor: pointer;
+  /* Pointer cursor on hover */
+  
+  transition: background-color 0.3s ease;
+  /* Smooth color change */
+}
+
+.cta-button:hover {
+  background-color: #ff5252;
+  /* Darker red on hover */
+}
+
+/* 
+  ===== SECTION TITLE STYLING =====
+  Used for main section headings
+*/
+
+.section-title {
+  font-size: 36px;
+  /* Large heading */
+  
+  text-align: center;
+  /* Center aligned */
+  
+  margin-bottom: 50px;
+  /* Space below */
+  
+  color: #1a3a52;
+  /* Dark blue color */
+  
+  font-weight: bold;
+  /* Bold text */
+}
+
+/* 
+  ===== ABOUT SECTION STYLES =====
+  Styles for the About Us section
+*/
+
+.about {
+  padding: 80px 20px;
+  /* Large padding (top and bottom) */
+  
+  background-color: #f8f9fa;
+  /* Light gray background */
+}
+
+.about-content {
+  display: grid;
+  /* Uses CSS Grid for layout */
+  
+  grid-template-columns: 1fr 1fr;
+  /* Two equal columns */
+  
+  gap: 50px;
+  /* Space between columns */
+  
+  align-items: start;
+  /* Aligns items to top */
+}
+
+.about-text h3 {
+  font-size: 24px;
+  /* Subheading size */
+  
+  color: #1a3a52;
+  /* Dark blue */
+  
+  margin-bottom: 20px;
+  /* Space below */
+}
+
+.about-text p {
+  font-size: 16px;
+  /* Regular text size */
+  
+  line-height: 1.8;
+  /* Increased line spacing */
+  
+  color: #555;
+  /* Dark gray */
+  
+  margin-bottom: 15px;
+  /* Space between paragraphs */
+}
+
+/* 
+  Feature boxes showing stats
+*/
+.about-features {
+  display: grid;
+  /* Grid layout */
+  
+  grid-template-columns: 1fr;
+  /* One column */
+  
+  gap: 20px;
+  /* Space between boxes */
+}
+
+.feature-box {
+  background-color: white;
+  /* White background */
+  
+  padding: 30px;
+  /* Internal spacing */
+  
+  border-radius: 8px;
+  /* Rounded corners */
+  
+  text-align: center;
+  /* Center aligned */
+  
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow */
+}
+
+.feature-box h4 {
+  font-size: 32px;
+  /* Large number */
+  
+  color: #667eea;
+  /* Purple color */
+  
+  margin-bottom: 10px;
+  /* Space below */
+}
+
+.feature-box p {
+  color: #666;
+  /* Gray text */
+  
+  font-size: 14px;
+  /* Small font */
+}
+
+/* 
+  ===== EVENTS SECTION STYLES =====
+  Styles for the events showcase section
+*/
+
+.events {
+  padding: 80px 20px;
+  /* Large padding */
+  
+  background-color: white;
+  /* White background */
+}
+
+/* 
+  Grid layout for event cards
+*/
+.events-grid {
+  display: grid;
+  /* Grid layout */
+  
+  grid-template-columns: repeat(3, 1fr);
+  /* Three equal columns */
+  
+  gap: 30px;
+  /* Space between cards */
+}
+
+/* 
+  Individual event card
+*/
+.event-card {
+  background-color: white;
+  /* White background */
+  
+  border-radius: 8px;
+  /* Rounded corners */
+  
+  overflow: hidden;
+  /* Hides content outside card */
+  
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow */
+  
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Smooth animation on hover */
+}
+
+.event-card:hover {
+  transform: translateY(-10px);
+  /* Lifts card up slightly */
+  
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  /* Enhanced shadow */
+}
+
+.event-image {
+  width: 100%;
+  /* Full width */
+  
+  height: 200px;
+  /* Fixed height */
+  
+  overflow: hidden;
+  /* Hides excess image */
+}
+
+.event-image img {
+  width: 100%;
+  /* Full width */
+  
+  height: 100%;
+  /* Full height */
+  
+  object-fit: cover;
+  /* Fits image without stretching */
+}
+
+.event-details {
+  padding: 25px;
+  /* Internal spacing */
+}
+
+.event-details h3 {
+  font-size: 20px;
+  /* Heading size */
+  
+  color: #1a3a52;
+  /* Dark blue */
+  
+  margin-bottom: 10px;
+  /* Space below */
+}
+
+.event-date {
+  color: #667eea;
+  /* Purple color */
+  
+  font-weight: bold;
+  /* Bold text */
+  
+  margin-bottom: 10px;
+  /* Space below */
+}
+
+.event-desc {
+  color: #666;
+  /* Gray text */
+  
+  font-size: 14px;
+  /* Small font */
+  
+  margin-bottom: 15px;
+  /* Space below */
+}
+
+/* 
+  Event registration button
+*/
+.event-button {
+  background-color: #667eea;
+  /* Purple background */
+  
+  color: white;
+  /* White text */
+  
+  padding: 10px 20px;
+  /* Internal spacing */
+  
+  border: none;
+  /* No border */
+  
+  border-radius: 5px;
+  /* Rounded corners */
+  
+  cursor: pointer;
+  /* Pointer cursor */
+  
+  transition: background-color 0.3s ease;
+  /* Smooth animation */
+}
+
+.event-button:hover {
+  background-color: #5568d3;
+  /* Darker purple on hover */
+}
+
+/* 
+  ===== PROJECTS SECTION STYLES =====
+  Styles for the projects showcase section
+*/
+
+.projects {
+  padding: 80px 20px;
+  /* Large padding */
+  
+  background-color: #f8f9fa;
+  /* Light gray background */
+}
+
+/* 
+  Grid for project cards
+*/
+.projects-grid {
+  display: grid;
+  /* Grid layout */
+  
+  grid-template-columns: repeat(2, 1fr);
+  /* Two columns */
+  
+  gap: 30px;
+  /* Space between cards */
+}
+
+/* 
+  Individual project card
+*/
+.project-card {
+  background-color: white;
+  /* White background */
+  
+  padding: 30px;
+  /* Internal spacing */
+  
+  border-radius: 8px;
+  /* Rounded corners */
+  
+  border-left: 4px solid #667eea;
+  /* Left border accent */
+  
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  /* Subtle shadow */
+  
+  transition: box-shadow 0.3s ease;
+  /* Smooth animation */
+}
+
+.project-card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  /* Enhanced shadow on hover */
+}
+
+.project-card h3 {
+  font-size: 20px;
+  /* Heading size */
+  
+  color: #1a3a52;
+  /* Dark blue */
+  
+  margin-bottom: 15px;
+  /* Space below */
+}
+
+.project-card p {
+  color: #666;
+  /* Gray text */
+  
+  margin-bottom: 10px;
+  /* Space between paragraphs */
+}
+
+.project-tech {
+  color: #667eea;
+  /* Purple color */
+  
+  font-weight: bold;
+  /* Bold text */
+  
+  font-size: 14px;
+  /* Small font */
+}
+
+/* 
+  ===== TEAM SECTION STYLES =====
+  Styles for the team section
+*/
+
+.team {
+  padding: 80px 20px;
+  /* Large padding */
+  
+  background-color: white;
+  /* White background */
+}
+
+/* 
+  Grid for team member cards
+*/
+.team-grid {
+  display: grid;
+  /* Grid layout */
+  
+  grid-template-columns: repeat(4, 1fr);
+  /* Four equal columns */
+  
+  gap: 30px;
+  /* Space between cards */
+}
+
+/* 
+  Individual team member card
+*/
+.team-member {
+  text-align: center;
+  /* Center aligned */
+  
+  padding: 20px;
+  /* Internal spacing */
+}
+
+.member-image {
+  width: 150px;
+  /* Set width */
+  
+  height: 150px;
+  /* Set height */
+  
+  margin: 0 auto 20px;
+  /* Center and space below */
+  
+  border-radius: 50%;
+  /* Makes image circular */
+  
+  overflow: hidden;
+  /* Hides excess image */
+  
+  border: 4px solid #667eea;
+  /* Purple border */
+}
+
+.member-image img {
+  width: 100%;
+  /* Full width */
+  
+  height: 100%;
+  /* Full height */
+  
+  object-fit: cover;
+  /* Fits image without stretching */
+}
+
+.team-member h3 {
+  font-size: 18px;
+  /* Heading size */
+  
+  color: #1a3a52;
+  /* Dark blue */
+  
+  margin-bottom: 8px;
+  /* Space below */
+}
+
+.member-role {
+  color: #667eea;
+  /* Purple color */
+  
+  font-weight: bold;
+  /* Bold text */
+  
+  font-size: 14px;
+  /* Small font */
+}
+
+/* 
+  ===== CONTACT SECTION STYLES =====
+  Styles for the contact section
+*/
+
+.contact {
+  padding: 80px 20px;
+  /* Large padding */
+  
+  background-color: #f8f9fa;
+  /* Light gray background */
+}
+
+.contact-content {
+  display: grid;
+  /* Grid layout */
+  
+  grid-template-columns: 1fr 1fr;
+  /* Two equal columns */
+  
+  gap: 50px;
+  /* Space between columns */
+}
+
+/* 
+  Contact form styling
+*/
+.contact-form {
+  display: flex;
+  /* Flex layout */
+  
+  flex-direction: column;
+  /* Stack items vertically */
+  
+  gap: 15px;
+  /* Space between form elements */
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 15px;
+  /* Internal spacing */
+  
+  border: 1px solid #ddd;
+  /* Light gray border */
+  
+  border-radius: 5px;
+  /* Rounded corners */
+  
+  font-size: 14px;
+  /* Font size */
+  
+  font-family: inherit;
+  /* Uses same font as rest of page */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  /* Removes default outline */
+  
+  border-color: #667eea;
+  /* Purple border on focus */
+  
+  box-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
+  /* Subtle purple shadow */
+}
+
+/* 
+  Submit button for form
+*/
+.submit-button {
+  background-color: #667eea;
+  /* Purple background */
+  
+  color: white;
+  /* White text */
+  
+  padding: 15px;
+  /* Internal spacing */
+  
+  border: none;
+  /* No border */
+  
+  border-radius: 5px;
+  /* Rounded corners */
+  
+  font-size: 16px;
+  /* Font size */
+  
+  cursor: pointer;
+  /* Pointer cursor */
+  
+  transition: background-color 0.3s ease;
+  /* Smooth animation */
+}
+
+.submit-button:hover {
+  background-color: #5568d3;
+  /* Darker purple on hover */
+}
+
+/* 
+  Contact information section
+*/
+.contact-info h3 {
+  font-size: 24px;
+  /* Heading size */
+  
+  color: #1a3a52;
+  /* Dark blue */
+  
+  margin-bottom: 20px;
+  /* Space below */
+}
+
+.contact-info p {
+  color: #666;
+  /* Gray text */
+  
+  margin-bottom: 15px;
+  /* Space between paragraphs */
+}
+
+/* 
+  Social media links
+*/
+.social-links {
+  display: flex;
+  /* Flex layout */
+  
+  gap: 15px;
+  /* Space between links */
+  
+  margin-top: 15px;
+  /* Space above */
+}
+
+.social-link {
+  display: inline-block;
+  /* Displays as inline block */
+  
+  padding: 8px 16px;
+  /* Internal spacing */
+  
+  background-color: #667eea;
+  /* Purple background */
+  
+  color: white;
+  /* White text */
+  
+  text-decoration: none;
+  /* No underline */
+  
+  border-radius: 5px;
+  /* Rounded corners */
+  
+  transition: background-color 0.3s ease;
+  /* Smooth animation */
+}
+
+.social-link:hover {
+  background-color: #5568d3;
+  /* Darker purple on hover */
+}
+
+/* 
+  ===== FOOTER SECTION STYLES =====
+  Styles for the footer at the bottom
+*/
+
+.footer {
+  background-color: #1a3a52;
+  /* Dark blue background */
+  
+  color: white;
+  /* White text */
+  
+  padding: 30px 20px;
+  /* Internal spacing */
+  
+  text-align: center;
+  /* Center aligned */
+}
+
+.footer p {
+  margin-bottom: 5px;
+  /* Small space between paragraphs */
+}
+
+/* 
+  ===== RESPONSIVE DESIGN (Mobile & Tablet) =====
+ */
+
+/* 
+  For screens smaller than 768px (tablets and smaller)
+*/
+@media (max-width: 768px) {
+  /* Hide desktop navigation and rearrange for mobile */
+  .nav-menu {
+    flex-direction: column;
+    /* Stack menu items vertically */
+    
+    gap: 10px;
+    /* Smaller gap on mobile */
+  }
+
+  /* Make hero section shorter on mobile */
+  .hero {
+    padding: 150px 20px;
+    /* Reduced padding */
+  }
+
+  .hero-title {
+    font-size: 36px;
+    /* Smaller font on mobile */
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+    /* Smaller font on mobile */
+  }
+
+  /* Change about section to single column */
+  .about-content {
+    grid-template-columns: 1fr;
+    /* One column */
+    
+    gap: 30px;
+    /* Reduced gap */
+  }
+
+  /* Change events to 2 columns on tablet */
+  .events-grid {
+    grid-template-columns: repeat(2, 1fr);
+    /* Two columns */
+  }
+
+  /* Change projects to 1 column on tablet */
+  .projects-grid {
+    grid-template-columns: 1fr;
+    /* One column */
+  }
+
+  /* Change team to 2 columns on mobile */
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    /* Two columns */
+  }
+
+  /* Change contact to single column */
+  .contact-content {
+    grid-template-columns: 1fr;
+    /* One column */
+  }
+}
+
+/* 
+  For very small screens (smartphones)
+*/
+@media (max-width: 480px) {
+  .header .container {
+    flex-direction: column;
+    /* Stack items vertically */
+    
+    gap: 10px;
+    /* Space between items */
+  }
+
+  .navbar {
+    text-align: center;
+    /* Center align navbar */
+  }
+
+  .section-title {
+    font-size: 28px;
+    /* Smaller heading */
+  }
+
+  /* Events section - one column on mobile */
+  .events-grid {
+    grid-template-columns: 1fr;
+    /* One column */
+  }
+
+  /* Team section - one column on mobile */
+  .team-grid {
+    grid-template-columns: 1fr;
+    /* One column */
+  }
+}
